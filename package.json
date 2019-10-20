@@ -1,0 +1,22 @@
+{
+  "name": "payfast",
+  "version": "1.0.0",
+  "description": "estudo de um gateway para pagamento através de recurso http.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gateway",
+    "pagamento",
+    "API"
+  ],
+  "author": "Joyce Azevedo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}
