@@ -1,5 +1,4 @@
 
-
 module.exports = function(app){
 
 
@@ -16,9 +15,16 @@ app.get('/pagamentos', function(req, res){
 
     pagamento.status = "CRIADO";
     pagamento.data = new Date;
+    const connection  = app.persistencia.connectionFactory();
+    const pagamentoDao  = new app.persistencia.pagamentoDao(connection);
 
+    PagamentoDao.salva(pagamento, function (erro, resultado){
+    console.log ('pagamento criado');
+    res.json(pagamento);
+
+    });
 
      res.send ('pagamento');        
 
-  })
+  });
 }
